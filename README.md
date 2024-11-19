@@ -1,25 +1,29 @@
 # Component-Loader
 
-📌 Example code
+📌 Example Code
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Component Loader</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./dist/index.css'>
-    <script src="Component-Loader.js" defer></script>
-</head>
-<body>
-    
-    <div class="Box">
-        
-        <Component-Loader class="Card" file="./component.html" />
-        
-    </div>
-    
-</body>
-</html>
+<Component-Loader class="Card" file="./component.html" />
+```
+
+📌 ComponentLoader Module Code
+```js
+class ComponentLoader extends HTMLElement {
+
+  connectedCallback() {
+    this.ComponentLoader()
+  }
+
+  ComponentLoader(){
+    const path = this.getAttribute('file');
+    fetch(path)
+    .then(response => response.text())
+    .then(html => {
+      this.innerHTML = html;
+      });
+  }
+
+}
+
+customElements.define('component-loader', ComponentLoader);
+
 ```
