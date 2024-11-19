@@ -5,7 +5,7 @@
 <Component-Loader class="Card" file="./component.html" />
 ```
 
-📌 ComponentLoader Module Code
+📌.js Module Code
 ```js
 class ComponentLoader extends HTMLElement {
 
