@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #15151d;
+  background-size: 64px 64px;
+  background-image: linear-gradient(to right, #00000033 1px, transparent 2px), linear-gradient(to bottom, #00000033 1px, transparent 2px);
+  color: #fff;
+}
+
+.Box {
+  position: absolute;
+  inset: 0;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  padding: 5px;
+  border: 1px solid red;
+}
