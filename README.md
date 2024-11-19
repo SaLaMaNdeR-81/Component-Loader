@@ -2,6 +2,7 @@
 
 📌 Example Code
 ```html
+<script src="Component-Loader.js" defer></script>
 <Component-Loader class="Card" file="./component.html" />
 ```
 
